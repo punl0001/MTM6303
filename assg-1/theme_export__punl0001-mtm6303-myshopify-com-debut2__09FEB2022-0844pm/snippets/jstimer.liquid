@@ -1,0 +1,41 @@
+<div class="checkout">
+  <div id="jstimer">
+   <h5>Time remaining:</h5>
+	<div id="clockdiv">
+	  <span>
+		<span class="minutes"></span>
+		<span class="smalltext">Minutes</span>
+	  </span>
+	  <span>
+		<span class="seconds"></span>
+		<span class="smalltext">Seconds</span>
+	  </span>
+	 </div>
+  </div>
+</div>
+
+<style> 
+  
+  #jstimer{ 
+    margin:auto;
+    text-align: center;
+    justify-content:center;
+    padding-top: 10px;
+  }
+    
+#clockdiv{
+  background-color: darkolivegreen;
+  color: white;
+  text-align: center;
+  margin:auto;
+  width: fit-content;
+  padding: 8px;
+}
+  
+  
+  .h5{ 
+    
+  
+</style>
+
+{{ 'cntdn-timer.js' | asset_url | script_tag }}

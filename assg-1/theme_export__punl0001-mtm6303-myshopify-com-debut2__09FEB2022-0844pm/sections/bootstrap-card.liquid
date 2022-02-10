@@ -1,0 +1,67 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ section.settings.card_image | image_url: width: 500 }}" alt="{{section.settings.card_image.alt}}">
+  <div class="card-body">
+    <h5 class="card-title">{{section.settings.card_title}}</h5>
+    <p class="card-text">{{section.settings.paragraph}}</p>
+    <a href="#" class="btn btn-primary">{{section.settings.btn-primary}}</a>
+  </div>
+</div>
+<style>
+  .card .btn {
+    background-color : {{ section.settings.btn-color}}
+  }
+</style>  
+{% schema %}
+{
+    "name": "Bootstrap Card",
+    "tag": "section",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+            "id": "card_title",
+            "type": "text",
+            "label": "Add Title",
+            "default": "add text"
+        },
+
+        {
+             "type": "richtext",
+             "id": "paragraph",
+             "label": "Paragraph"
+        },
+{
+            "id": "btn-primary",
+            "type": "text",
+            "label": "button Text",
+            "default": "add text"
+        },
+        {
+              "type": "url",
+              "id": "button_link",
+              "label": "Button link"
+        },
+
+
+        {
+            "type": "color",
+            "id": "btn-color",
+            "label": "Button Color",
+            "default": "#3b4d28"
+        }
+
+    ],
+    "presets": [{
+        "name": "Bootstrap Card",
+        "category": "Custom"
+    }]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
